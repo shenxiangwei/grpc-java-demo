@@ -52,7 +52,7 @@ public class HelloWorld_Client {
     public static void main(String[] args) throws InterruptedException {
         HelloWorld_Client client = new HelloWorld_Client("127.0.0.1",50051);
         try{
-            String user = "这是发送给服务端的消息";
+            String user = "world";
             if (args.length > 0){
                 user = args[0];
             }

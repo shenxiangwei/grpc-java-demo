@@ -69,7 +69,7 @@ public class HelloWorld_Server {
 
         @Override
         public void sayHello(HelloRequest req,StreamObserver<HelloReply> responseObserver){
-            HelloReply reply = HelloReply.newBuilder().setMessage(("发送给客户端消息+来自客户端消息: "+req.getName())).build();
+            HelloReply reply = HelloReply.newBuilder().setMessage(("Hello "+req.getName())).build();
             responseObserver.onNext(reply);
             responseObserver.onCompleted();
             System.out.println("Message from gRPC-Client:" + req.getName());
